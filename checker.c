@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <assert.h>
+#include <string.h>
  
 // Function to check if a parameter is within range and return the status message
 const char* getStatus(const char* parameter, float value, float minimumRange, float maximumRange, const char* lowRangeMessageindiaction, const char* highRangeMessageindiaction) {
