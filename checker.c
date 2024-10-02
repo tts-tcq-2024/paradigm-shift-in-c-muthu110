@@ -21,7 +21,7 @@ bool batteryIsOk(float temperature, float soc, float chargeRate) {
     bool isBatteryOk = true;
     const char* tempStatus = getStatus("Temperature", temperature, 0, 45, " is too low!", " is too high!");
     const char* socStatus = getStatus("State of Charge", soc, 20, 80, " is too low!", " is too high!");
-    const char* chargeRateStatus = getStatus("Charge Rate", chargeRate, 0, 0.8f, "", " is too high!");
+    const char* chargeRateStatus = getStatus("Charge Rate", chargeRate, 0, 0.8, "", " is too high!");
  
     const char* statusMessages[] = { tempStatus, socStatus, chargeRateStatus };
  
@@ -38,7 +38,7 @@ bool batteryIsOk(float temperature, float soc, float chargeRate) {
 // Main function with assertions to test the batteryIsOk function
 int main() {
     // Testing different conditions
-    assert(batteryIsOk(25, 70, 0.7f)) ;
-    assert(batteryIsOk(-1, 70, 0.7f)); 
+    assert(batteryIsOk(25, 70, 0.7)) ;
+    assert(batteryIsOk(-1, 70, 0.7)); 
     return 0;
 }
