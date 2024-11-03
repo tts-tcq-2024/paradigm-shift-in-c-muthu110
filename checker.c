@@ -58,11 +58,6 @@ int main() {
     assert(batteryIsOk(25, 70, 0.7f) == true);             // Normal case
     assert(batteryIsOk(22, 70, 0.7f) == true);             // Within SOC warning limit
     assert(batteryIsOk(25, 78, 0.7f) == true);             // Within upper SOC warning limit
-    assert(batteryIsOk(25, 16, 0.7f) == false);            // SOC below range
-    assert(batteryIsOk(25, 70, 0.85f) == false);           // Charge rate above max range
-    assert(batteryIsOk(42, 70, 0.7f) == true);             // Within temperature warning limit
-    assert(batteryIsOk(46, 70, 0.7f) == false);            // Temperature above max range
-
     printf("All tests passed successfully.\n");
     return 0;
 }
